@@ -12,14 +12,12 @@ public class GetBeers extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         response.setContentType("text/html");
 
-        Connection conn = null;
-        ResultSet results = null;
         ArrayList<Beer> beerList = new ArrayList<Beer>();
         try {
-            conn = DatabaseWrapper.getConnection();
+            Connection conn = DatabaseWrapper.getConnection();
 
             Statement stmt = conn.createStatement();
-            results = stmt.executeQuery("SELECT * FROM beer");
+            ResultSet results = stmt.executeQuery("SELECT * FROM beer");
 
             while(results.next()){
                 beerList.add(new Beer(results.getString(1), results.getFloat(2), results.getFloat(6)));
