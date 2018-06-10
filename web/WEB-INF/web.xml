@@ -33,4 +33,14 @@
         <servlet-name>AddCustomer</servlet-name>
         <url-pattern>/addcustomer</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ABCustomers</servlet-name>
+        <servlet-class>ABCustomers</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ABCustomers</servlet-name>
+        <url-pattern>/abcustomers</url-pattern>
+    </servlet-mapping>
 </web-app>
