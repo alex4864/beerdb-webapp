@@ -34,6 +34,10 @@ public class AddCustomer extends HttpServlet {
             PreparedStatement stmt = conn.prepareStatement(addCustomerQuery);
             stmt.setString(1, request.getParameter("name"));
             stmt.setString(2, request.getParameter("address"));
+
+            // REFERENTIAL INTEGRITY:
+            // Since we are adding a row, and since this row contains no foreign keys, this update cannot cause a
+            // violation of referential integrity
             stmt.executeUpdate();
 
             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/addcustomersuccess.jsp");
