@@ -53,4 +53,14 @@
         <servlet-name>GeorgeBeers</servlet-name>
         <url-pattern>/georgebeers</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ChineseCustomers</servlet-name>
+        <servlet-class>ChineseCustomers</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ChineseCustomers</servlet-name>
+        <url-pattern>/chinesecustomers</url-pattern>
+    </servlet-mapping>
 </web-app>
