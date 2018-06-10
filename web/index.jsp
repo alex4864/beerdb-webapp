@@ -21,6 +21,9 @@
         </ul>
 
         <h1>Query Database</h1>
+        <ul>
+            <li><a href="/getbeers">See All Available Beers</a></li>
+        </ul>
     </div>
 </body>
 </html>
