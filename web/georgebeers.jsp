@@ -15,7 +15,7 @@
 <section class="hero">
     <div class="hero-body">
         <h1 class="title">Beers Purchased By George</h1>
-        <h2 class="subtitle">Names, types, sizes, and prices of beers bought by George</h2>
+        <h2 class="subtitle">Names, types, sizes, and prices of beers costing more than 2 Euro bought by George</h2>
     </div>
 </section>
 <body>

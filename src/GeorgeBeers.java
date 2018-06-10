@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 public class GeorgeBeers extends HttpServlet {
 
-    // query returns names of customers who have purchased Anheuser-Busch beers
+    // query returns the beers purchased by george costing more than 2.0
     private final String GeorgeBeersQuery = "SELECT name, type, size, price FROM beer " +
             "WHERE (name IN (SELECT beer_name FROM transaction GROUP BY beer_name HAVING price > 2.0)) " +
             "AND (name IN (SELECT beer_name FROM transaction WHERE (customer_id IN (SELECT customer_id FROM customer WHERE name = 'Georgie'))));";

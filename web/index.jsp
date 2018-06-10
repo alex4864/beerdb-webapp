@@ -24,7 +24,8 @@
         <ul>
             <li><a href="/getbeers">See All Available Beers</a></li>
             <li><a href="/abcustomers">View Anheuser-Busch Customers</a></li>
-            <li><a href="/georgebeers">List Types of Beer Ordered by George</a></li>
+            <li><a href="/georgebeers">List Types of Beer Ordered by George Costing Less Than 2 Euro</a></li>
+            <li><a href="/chinesecustomers">Show Customers Who Purchased Chinese Beers in 2014</a></li>
         </ul>
     </div>
 </body>
