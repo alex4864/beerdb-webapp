@@ -4,28 +4,28 @@
     <session id="527763335">
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="19" />
+          <entry key="java" value="25" />
           <entry key="jsp" value="23" />
           <entry key="xml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="19" />
+          <entry key="JAVA" value="25" />
           <entry key="JSP" value="23" />
           <entry key="XML" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="4847" />
+          <entry key="java" value="5629" />
           <entry key="jsp" value="1807" />
           <entry key="xml" value="250" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="4847" />
+          <entry key="JAVA" value="5629" />
           <entry key="JSP" value="1807" />
           <entry key="XML" value="250" />
         </counts>

@@ -15,6 +15,7 @@
 <section class="hero">
     <div class="hero-body">
         <h1 class="title">Failed to Add Transaction</h1>
+        <h2 class="subtitle">${errorMessage}</h2>
     </div>
 </section>
 <p>Way to suck.  <a href="${pageContext.request.contextPath}/addcustomer">Retry Here.</a></p>

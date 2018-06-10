@@ -37,7 +37,12 @@ public class AddTransaction extends HttpServlet {
             stmt.setString(4, formattedNow);
             stmt.setInt(5, Integer.parseInt(request.getParameter("customer_id")));
 
-            System.out.println(stmt);
+            // Referential Integrity Check occurs here!
+            // Our database is configured so that beer_name, beer_size, and customer_id are foreign keys, and if any of
+            // these fields do not point to an existing reference then SQLException is thrown, and the client is served
+            // a 400 response with a prompt to try again and a link to the original form.  Also note that the system can
+            // even detect violations of the composite key of beer, i.e. if a user attempts to add a transaction with a
+            // beer name that our database contains, but not in a size we have, this transaction will also be rejected
             stmt.executeUpdate();
 
             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/addtransactionsuccess.jsp");

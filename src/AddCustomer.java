@@ -23,6 +23,13 @@ public class AddCustomer extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException{
 
         try {
+            if(request.getParameter("name").equals("")) {
+                throw new IllegalArgumentException("Name cannot be empty");
+            }
+            if(request.getParameter("address").equals("")) {
+                throw new IllegalArgumentException("Address cannot be empty");
+            }
+
             Connection conn = DatabaseWrapper.getConnection();
             PreparedStatement stmt = conn.prepareStatement(addCustomerQuery);
             stmt.setString(1, request.getParameter("name"));
@@ -31,8 +38,9 @@ public class AddCustomer extends HttpServlet {
 
             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/addcustomersuccess.jsp");
             dispatcher.forward(request, response);
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
+        } catch (Exception e) {
+            response.setStatus(400);
+            request.setAttribute("errorMessage", e.getMessage());
             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/addcustomerfailure.jsp");
             dispatcher.forward(request, response);
         }
