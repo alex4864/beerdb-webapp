@@ -16,16 +16,16 @@
     <div class="content">
         <h1>Modify Database</h1>
         <ul>
-            <li><a href="/addtransaction">Add Transaction</a></li>
-            <li><a href="/addcustomer">Add Customer</a></li>
+            <li><a href="${pageContext.request.contextPath}/addtransaction">Add Transaction</a></li>
+            <li><a href="${pageContext.request.contextPath}/addcustomer">Add Customer</a></li>
         </ul>
 
         <h1>Query Database</h1>
         <ul>
-            <li><a href="/getbeers">See All Available Beers</a></li>
-            <li><a href="/abcustomers">View Anheuser-Busch Customers</a></li>
-            <li><a href="/georgebeers">List Types of Beer Ordered by George Costing Less Than 2 Euro</a></li>
-            <li><a href="/chinesecustomers">Show Customers Who Purchased Chinese Beers in 2014</a></li>
+            <li><a href="${pageContext.request.contextPath}/getbeers">See All Available Beers</a></li>
+            <li><a href="${pageContext.request.contextPath}/abcustomers">View Anheuser-Busch Customers</a></li>
+            <li><a href="${pageContext.request.contextPath}/georgebeers">List Types of Beer Ordered by George Costing Less Than 2 Euro</a></li>
+            <li><a href="${pageContext.request.contextPath}/chinesecustomers">Show Customers Who Purchased Chinese Beers in 2014</a></li>
         </ul>
     </div>
 </body>

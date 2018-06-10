@@ -19,7 +19,7 @@
         </div>
     </section>
 
-    <form action="/addtransaction" method="post">
+    <form action="${pageContext.request.contextPath}/addtransaction" method="post">
         <div class="field">
             <label class="label">Customer ID</label>
             <div class="control">

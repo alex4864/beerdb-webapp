@@ -17,6 +17,6 @@
         <h1 class="title">Failed to Add Transaction</h1>
     </div>
 </section>
-<p>Way to suck.  <a href="/addcustomer">Retry Here.</a></p>
+<p>Way to suck.  <a href="${pageContext.request.contextPath}/addcustomer">Retry Here.</a></p>
 </body>
 </html>

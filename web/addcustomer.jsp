@@ -19,7 +19,7 @@
         </div>
     </section>
 
-    <form action="/addcustomer" method="post">
+    <form action="${pageContext.request.contextPath}/addcustomer" method="post">
         <div class="field">
             <label class="label">Name</label>
             <div class="control">

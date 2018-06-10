@@ -17,5 +17,8 @@
         <h1 class="title">Transaction Added Successfully</h1>
     </div>
 </section>
+
+<a href="${pageContext.request.contextPath}/">Home</a>
+
 </body>
 </html>
