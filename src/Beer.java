@@ -1,24 +1,32 @@
 public class Beer {
     private String name;
+    private String type;
     private float size;
-    private float percentage;
-    public Beer(String name, float size, float percentage) throws IllegalArgumentException {
-        if(percentage < 0.0f || percentage > 100.0f){
-            throw new IllegalArgumentException("Percentage must be between 0.0 and 1.0");
+    private float price;
+    public Beer(String name, String type, float size, float price) throws IllegalArgumentException {
+        if(size < 0.0f || size > 4.0f) {
+            throw new IllegalArgumentException("Beer size must be within reasonable bounds (between 0 and 4 L)");
+        }
+        if(price < 0.0f) {
+            throw new IllegalArgumentException("Price cannot be negative");
         }
 
         this.name = name;
+        this.type = type;
         this.size = size;
-        this.percentage = percentage;
+        this.price = price;
     }
 
     public String getName() {
         return name;
     }
+    public String getType() {
+        return type;
+    }
     public float getSize() {
         return size;
     }
-    public float getPercentage() {
-        return percentage;
+    public float getPrice() {
+        return price;
     }
 }
