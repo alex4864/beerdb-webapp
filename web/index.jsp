@@ -23,6 +23,8 @@
         <h1>Query Database</h1>
         <ul>
             <li><a href="/getbeers">See All Available Beers</a></li>
+            <li><a href="/abcustomers">View Anheuser-Busch Customers</a></li>
+            <li><a href="/georgebeers">List Types of Beer Ordered by George</a></li>
         </ul>
     </div>
 </body>
