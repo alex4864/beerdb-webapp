@@ -43,4 +43,14 @@
         <servlet-name>ABCustomers</servlet-name>
         <url-pattern>/abcustomers</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>GeorgeBeers</servlet-name>
+        <servlet-class>GeorgeBeers</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>GeorgeBeers</servlet-name>
+        <url-pattern>/georgebeers</url-pattern>
+    </servlet-mapping>
 </web-app>

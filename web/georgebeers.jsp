@@ -10,12 +10,12 @@
 <html>
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
-    <title>All Beers</title>
+    <title>Beers Purchased By George</title>
 </head>
 <section class="hero">
     <div class="hero-body">
-        <h1 class="title">All Beers</h1>
-        <h2 class="subtitle">View all beers we currently offer</h2>
+        <h1 class="title">Beers Purchased By George</h1>
+        <h2 class="subtitle">Names, types, sizes, and prices of beers bought by George</h2>
     </div>
 </section>
 <body>
@@ -24,7 +24,7 @@
             <tr>
                 <th>Name</th>
                 <th>Type</th>
-                <th>Size (L)</th>
+                <th>Size</th>
                 <th>Price</th>
             </tr>
         </thead>

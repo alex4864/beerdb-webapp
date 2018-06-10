@@ -4,10 +4,18 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
-import java.sql.*;
 
-public class GetBeers extends HttpServlet {
+public class GeorgeBeers extends HttpServlet {
+
+    // query returns names of customers who have purchased Anheuser-Busch beers
+    private final String GeorgeBeersQuery = "SELECT name, type, size, price FROM beer " +
+            "WHERE (name IN (SELECT beer_name FROM transaction GROUP BY beer_name HAVING price > 2.0)) " +
+            "AND (name IN (SELECT beer_name FROM transaction WHERE (customer_id IN (SELECT customer_id FROM customer WHERE name = 'Georgie'))));";
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         response.setContentType("text/html");
@@ -17,10 +25,10 @@ public class GetBeers extends HttpServlet {
             Connection conn = DatabaseWrapper.getConnection();
 
             Statement stmt = conn.createStatement();
-            ResultSet results = stmt.executeQuery("SELECT * FROM beer");
+            ResultSet results = stmt.executeQuery(GeorgeBeersQuery);
 
             while(results.next()){
-                beerList.add(new Beer(results.getString(1), results.getString(3), results.getFloat(2), results.getFloat(4)));
+                beerList.add(new Beer(results.getString(1), results.getString(2), results.getFloat(3), results.getFloat(4)));
             }
         }
         catch (SQLException e) {
@@ -29,7 +37,7 @@ public class GetBeers extends HttpServlet {
 
         request.setAttribute("beers", beerList);
 
-        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/getbeers.jsp");
+        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/georgebeers.jsp");
         dispatcher.forward(request, response);
     }
 }
